@@ -6,7 +6,6 @@ from selenium import webdriver
 
 
 def main():
-    print(os.path.abspath(__file__))
     abs_dirpath = os.path.dirname(os.path.abspath(__file__))
     auth_filepath = os.path.join(abs_dirpath, "auth.json")
 
@@ -32,7 +31,6 @@ def main():
                 driver.get(url)
                 time.sleep(1.5)
 
-                print(driver.current_url)
                 if driver.current_url == "https://na.ynu.ac.jp/www/login-success-page.html":
                     driver.close()
                 else:
